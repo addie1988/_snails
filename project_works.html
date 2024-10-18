@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    // 使用 JavaScript 加載 meta 模組
+    fetch("./main/meta.html")
+        .then((response) => response.text())
+        .then((data) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, "text/html");
+            const metaTags = doc.head.children;
+
+            // 將 meta 標籤添加到當前文檔的 head 中
+            Array.from(metaTags).forEach((tag) => {
+                document.head.appendChild(tag);
+            });
+        })
+        .catch((error) => console.error("Error loading meta tags:", error));
+</script>
+
+<body>
+
+    <!-- 第一個滾差效果區域 -->
+    <div class="parallax-section parallax-bg1">
+        <div class="section-content">
+            <div id="header"></div>
+        </div>
+    </div>
+
+    <!-- 第二個滾差效果區域 -->
+    <div class="parallax-section parallax-section_works parallax-bg3">
+        <div class="section-content">
+            <div id="works"></div>
+        </div>
+    </div>
+
+
+    <!-- 靜態內容區域 -->
+    <div class="static-section_footer parallax-bg6">
+        <div id="footer"></div>
+    </div>
+
+
+
+    <!-- js---------------------------------------------------------------------- -->
+
+    <!-- 作品 -->
+    <script type="text/javascript" src="./js/works.js" defer></script>
+    <!-- 彈跳視窗 -->
+    <script type=" text/javascript" src="./js/pop-up_window.js" defer></script>
+    <!-- 加載彈跳視窗內容 -->
+    <script type="text/javascript" src="./js/works_min_content.js" defer></script>
+
+</body>
+
+</html>

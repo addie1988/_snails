@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // 使用 JavaScript 加載 meta 模組
+        fetch("./main/meta.html")
+            .then((response) => response.text())
+            .then((data) => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, "text/html");
+                const metaTags = doc.head.children;
+
+                // 將 meta 標籤添加到當前文檔的 head 中
+                Array.from(metaTags).forEach((tag) => {
+                    document.head.appendChild(tag);
+                });
+            })
+            .catch((error) => console.error("Error loading meta tags:", error));
+    </script>
+</head>
+
+<body data-page="home">
+
+    <!-- 第一個滾差效果區域 -->
+    <div class="parallax-section parallax-bg1">
+        <div class="section-content">
+            <div id="header"></div>
+        </div>
+    </div>
+
+    <!-- 靜態內容區域 -->
+    <div class="static-section parallax-section parallax-bg2">
+        <div id="about"></div>
+    </div>
+
+    <!-- 第二個滾差效果區域 -->
+    <div class="parallax-section parallax-bg3">
+        <div class="section-content">
+            <div id="service"></div>
+        </div>
+    </div>
+
+    <!-- 靜態內容區域 -->
+    <div class="static-section_work parallax-section parallax-bg4">
+        <div id="work"></div>
+    </div>
+
+    <!-- 第三個滾差效果區域 -->
+    <div class="parallax-section section_contact  parallax-bg5">
+        <div class="section-content">
+            <div id="contact"></div>
+        </div>
+    </div>
+
+    <!-- 靜態內容區域 -->
+    <div class="static-section_footer parallax-bg6">
+        <div id="footer"></div>
+    </div>
+
+    <!-- js---------------------------------------------------------------------- -->
+
+    <script type="text/javascript" src="./js/style.js"></script>
+
+
+
+
+</body>
+
+</html>
