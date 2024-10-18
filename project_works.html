@@ -7,14 +7,14 @@
         .then((data) => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(data, "text/html");
-            const metaTags = doc.head.children;
+            const linkTags = doc.head.querySelectorAll('link[rel="stylesheet"]');
 
-            // 將 meta 標籤添加到當前文檔的 head 中
-            Array.from(metaTags).forEach((tag) => {
+            // 將 link 標籤添加到當前文檔的 head 中
+            linkTags.forEach((tag) => {
                 document.head.appendChild(tag);
             });
         })
-        .catch((error) => console.error("Error loading meta tags:", error));
+        .catch((error) => console.error("Error loading link tags:", error));
 </script>
 
 <body>
