@@ -9,31 +9,68 @@
                 </div>
                 <div class="menu">
                     <div class="menu_content">
-                        <img id="menu_img" onclick="toggleMenu()" src="./images/list.svg" alt="漢堡選單">
+                        <div class="close-btn" onclick="toggleMenu()">
+                            <div class="close-btn_content">
+                                <div class="close-btn_span">
+                                    <div class="close-btn_span_content">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- 全螢幕選單 -->
                         <div class="fullscreen-menu" id="menu_img_text">
                             <div class="fullscreen-menu_content">
                                 <div class="fullscreen-menu_content_text">
-                                    <img onclick="closure()" src="./images/x.svg" alt="">
-                                    <ul>
-                                        <li><img src="./images/figure51.svg" alt=""></li>
-                                        <li><a href="./index.html"><i>首頁</i></a></li>
-                                        <li>
-                                            <div class="menu-button" onclick="menuButton()" id="menuButton"><i>作品</i>
-                                                <div class="menu-button_icon">
-                                                    <img src="./images/plus.svg" alt="">
+                                    <div class="fullscreen-menu_content_text_content">
+                                        <div class="close-btn" onclick="closure()">
+                                            <div class="close-btn_content">
+                                                <div class="close-btn_span">
+                                                    <div class="close-btn_span_content">
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="dropdown-menu" id="dropdownMenu">
-                                                <a href="./project_works.html">平面設計</a>
-                                                <a href="./project_works.html">貼圖設計</a>
-                                                <a href="./project_works.html">RWD切版</a>
-                                                <a href="./project_works.html">投放廣告設計</a>
-                                                <a href="./project_works.html">APP優化</a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                        <div class="eye_svg">
+                                            <siv class="eye_svg_content">
+                                                <div id="eye"></div>
+                                            </siv>
+                                        </div>
+                                        <ul>
+                                            <li><a href="./index.html">
+                                                    <p>首頁</p>
+                                                </a></li>
+                                            <li>
+                                                <a href="./project_works.html">
+                                                    <p>作品</p>
+                                                </a>
+                                            </li>
+                                            <li><a href="./project_works.html">
+                                                    <p>平面設計</p>
+                                                </a>
+                                            </li>
+                                            <li><a href="./project_works.html">
+                                                    <p>貼圖設計</p>
+                                                </a></li>
+                                            <li><a href="./project_works.html">
+                                                    <p>RWD切版</p>
+                                                </a></li>
+                                            <li><a href="./project_works.html">
+                                                    <p>投放廣告設計</p>
+                                                </a></li>
+                                            <li><a href="./project_works.html">
+                                                    <p>APP介面設計</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="copyright">
+                                        <div class="copyright_content">
+                                            <p>Copyright ©2012 Snails . rights reserved.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -84,5 +121,3 @@
         </div>
     </div>
 </div>
-
-

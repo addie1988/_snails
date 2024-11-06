@@ -1,0 +1,354 @@
+@import "_reset.sass"
+
+// ----------------------------------------------------------------    
+
+@font-face
+    font-family: 'ZenKakuGothicNew-Black'
+    src: url('../font/ZenKakuGothicNew-Black.ttf')
+
+@font-face
+    font-family: 'BlackOpsOne-Regular'
+    src: url('../font/BlackOpsOne-Regular.ttf')
+
+$max_1400_max-width: 1400px
+$header_logo: 50%
+$header_menu: 50%
+$min_position_relative: relative
+$min_position_absolute: absolute
+$min_50_font-size: 50px
+$min_60_font-size: 60px
+$min_24_font-size: 24px
+$min_18_font-size: 18px
+$min_16_font-size: 16px
+$menu_text_font-size: 30px
+$chinese_font: ZenKakuGothicNew-Black
+$main_background-color: #FFC700
+
+%display_flex
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+// ---------------------------------------------------------------- 
+.section_contact
+    position: $min_position_relative
+    height: 76vh
+    &::before
+        content: ''
+        width: 50%
+        height: 50%
+        background: url('../images/Component7.svg')
+        background-size: cover
+        position: $min_position_absolute
+        z-index: -1
+        right: 0
+        bottom: -1px
+    .section-content
+        #contact
+            .contact
+                width: $max_1400_max-width
+                height: 100%
+                position: $min_position_relative
+                display: inline-flex
+                align-items: center
+                .contact_logo
+                    position: $min_position_absolute
+                    top: 0
+                    left: 0
+                    .contact_logo_content
+                        a
+                            display: inline-block
+                            img
+                                width: 100%
+                .contact_content
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    .contact_text
+                        @extend %display_flex
+                        .contact_text_content
+                            .contact_title_text
+                                .contact_title_text_contrne
+                                    margin: 50px auto
+                                    line-height: 3
+                                    p
+                                        color: #000
+                                        font-size: $min_24_font-size
+                                        font-family: $chinese_font
+                                    .contact_title_text_contrne_span
+                                        position: $min_position_relative
+                                        margin: 20px 0
+                                        .contact_title_text_contrne_span_content
+                                            margin: 0 auto
+                                            display: flex
+                                            align-items: center
+                                            justify-content: center
+                                            span
+                                                width: 100%
+                                                height: 2px
+                                                display: inline-block
+                                                background-color: #000000
+                                                position: $min_position_relative
+                                                &::before
+                                                    content: ''
+                                                    width: 0%
+                                                    height: 2px
+                                                    background-color: $main_background-color
+                                                    position: $min_position_absolute
+                                                    left: 0
+                                                    top: 0
+                                                    animation: contact_title_text_contrne_span 5s infinite
+                                                    @keyframes contact_title_text_contrne_span
+                                                        0%
+                                                            width: 0%
+                                                        50%
+                                                            width: 60%
+                                                        100%
+                                                            width: 0%
+                                    .emill
+                                        position: $min_position_relative
+                                        .emill_content
+                                            display: flex
+                                            justify-content: center
+                                            a
+                                                color: #000
+                                                font-size: $min_16_font-size
+                                                text-decoration: none
+                                                display: flex
+                                                align-items: center
+                                                word-wrap: break-word
+                                                &:hover
+                                                    .emill_content_img
+                                                        &::after
+                                                            border-radius: 50%
+                                                            transform: rotate(0deg)
+                                                .emill_content_img
+                                                    width: 40px
+                                                    height: 40px
+                                                    display: flex
+                                                    align-items: center
+                                                    justify-content: center
+                                                    position: $min_position_relative
+                                                    img
+                                                        width: 24px
+                                                        height: 24px
+                                                        display: inline-block
+                                                    &::after
+                                                        content: ''
+                                                        width: 40px
+                                                        height: 40px
+                                                        display: inline-block
+                                                        background-color: $main_background-color
+                                                        position: $min_position_absolute
+                                                        z-index: -1
+                                                        transform: rotate(45deg)
+                                                        transition: border-radius .5s ease-in-out, transform .5s ease-in-out
+                                                .emill_content_p
+                                                    p
+                                                        font-size: $min_16_font-size
+                                                        margin-left: 20px
+                                    .emill_icon
+                                        position: $min_position_relative
+                                        .emill_icon_content
+                                            margin: 0 auto
+                                            ul
+                                                display: flex
+                                                li
+                                                    margin-right: 16px
+                            .up
+                                position: $min_position_relative
+                                display: inline-block
+                                .up_content
+                                    margin: 0 auto
+                                    position: $min_position_relative
+                                    a
+                                        display: flex
+                                        align-items: center
+                                        justify-content: center
+                                        img
+                                            position: $min_position_absolute
+                                        .up_span
+                                            width: 100px
+                                            height: 100px
+                                            border: 3px solid $main_background-color
+                                            border-radius: 50%
+                                            @extend %display_flex
+                                            position: $min_position_relative
+                                            animation: up 20s infinite
+                                            .up_span_cpntent
+                                                margin: 0 auto
+                                                span
+                                                    width: 20px
+                                                    height: 20px
+                                                    background-color: $main_background-color
+                                                    border-radius: 50%
+                                                    position: absolute
+                                                    top: -10px
+                                                    left: 45%
+                                                    z-index: -1
+                    .contact_map
+                        width: 70%
+                        @extend %display_flex
+                        .contact_map_content
+                            @extend %display_flex
+                            width: 100%
+                            height: 80%
+                            iframe
+                                border-top-left-radius: 22px
+                                border-top-right-radius: 200px
+                                border-bottom-left-radius: 22px
+                                border-bottom-right-radius: 22px
+// ----------------------------------------------------------------  
+
+@keyframes up
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+// ----------------------------------------------------------------  
+
+@media screen and (max-width: 1427px)
+    .section_contact
+        height: 100vh
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            background: url('../images/Frame18.svg')
+            background-size: cover
+            position: $min_position_absolute
+            top: 0
+            left: 0
+            z-index: -2
+        &::before
+            width: 100%
+            height: 100%
+            border-top-left-radius: 300px
+            border-top-right-radius: 300px
+        .section-content
+            width: 100%
+            display: inline-block
+            #contact
+                .contact
+                    width: 100%
+                    .contact_logo
+                        display: none
+                    .contact_content
+                        justify-content: center
+                        .contact_text
+                            width: 100%
+                            order: 1
+                            margin: 0 auto
+                            .contact_text_content
+                                width: 100%
+                                text-align: center
+                                display: flex
+                                align-items: center
+                                justify-content: space-around
+                                .contact_title_text
+                                    order: 1
+                                    .contact_title_text_contrne
+                                        text-align: center
+                                        p
+                                        .contact_title_text_contrne_span
+                                            .contact_title_text_contrne_span_content
+                                                span
+                                                    width: 100%
+                                                    &::before
+                                                        background-color: #fff
+                                        .emill
+                                            .emill_content
+                                                a
+                                                    &:hover
+                                                        .emill_content_img
+                                                            &::after
+                                                    .emill_content_img
+                                                        img
+                                                        &::after
+                                                            background-color: #fff
+                                                    .emill_content_p
+                                                        p
+                                        .emill_icon
+                                            .emill_icon_content
+                                                ul
+                                                    display: flex
+                                                    flex-wrap: wrap
+                                                    align-items: center
+                                                    justify-content: center
+                                                    li
+                                                        margin-right: 0px
+                                                        margin: 16px
+                                .up
+                                    order: 2
+                                    .up_content
+                                        a
+                                            .up_span
+                                                border: 3px solid #fff
+                                                .up_span_cpntent
+                                                    span
+                                                        background-color: #fff
+                        .contact_map
+                            width: 100%
+                            order: 2
+                            .contact_map_content
+                                height: 100%
+                                iframe
+                                    border-top-left-radius: 0
+                                    border-top-right-radius: 0
+                                    border-bottom-left-radius: 0
+                                    border-bottom-right-radius: 0
+
+// ----------------------------------------------------------------  
+
+@media screen and (max-width: 610px)
+    .section_contact
+        .section-content
+            #contact
+                .contact
+                    .contact_logo
+                    .contact_content
+                        .contact_text
+                            width: 100%
+                            .contact_text_content
+                                display: block
+                                .contact_title_text
+                                    width: 100%
+                                    .contact_title_text_contrne
+                                        p
+                                        .contact_title_text_contrne_span
+                                            .contact_title_text_contrne_span_content
+                                                span
+                                                    width: 50%
+                                                    &::before
+                                        .emill
+                                            .emill_content
+                                                a
+                                                    &:hover
+                                                        .emill_content_img
+                                                            &::after
+                                                        .emill_content_img
+                                                            img
+                                                            &::after
+                                                                background-color: #fff
+                                                        .emill_content_p
+                                                            p
+                                        .emill_icon
+                                            .emill_icon_content
+                                                ul
+                                                    li
+                                .up
+                                    width: 100%
+                                    display: inline-block
+                                    .up_content
+                                        a
+                                            .up_span
+                                                .up_span_cpntent
+                                                    span
+                        .contact_map
+                            width: 100%
+                            .contact_map_content
+                                iframe

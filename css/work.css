@@ -128,11 +128,11 @@ table {
   }
 }
 
-@media screen and (max-width: 310px) {
-  .work {
+@media screen and (max-width: 460px) {
+  #work .work {
     width: 100%;
   }
-  .work .work_content .work_button .work_button_content a p {
+  #work .work .work_content .work_button .work_button_content a p {
     text-align: center;
   }
 }

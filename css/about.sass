@@ -1,0 +1,180 @@
+@import "_reset.sass"
+
+// ----------------------------------------------------------------    
+
+@font-face
+    font-family: 'ZenKakuGothicNew-Black'
+    src: url('../font/ZenKakuGothicNew-Black.ttf')
+
+@font-face
+    font-family: 'BlackOpsOne-Regular'
+    src: url('../font/BlackOpsOne-Regular.ttf')
+
+$max_1400_max-width: 1400px
+$header_logo: 50%
+$header_menu: 50%
+$min_position_relative: relative
+$min_position_absolute: absolute
+$min_50_font-size: 50px
+$min_60_font-size: 60px
+$min_24_font-size: 24px
+$min_18_font-size: 18px
+$min_16_font-size: 16px
+$menu_text_font-size: 30px
+$chinese_font: ZenKakuGothicNew-Black
+$main_background-color: #FFC700
+
+%display_flex
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+// ---------------------------------------------------------------- 
+
+.about
+    position: $min_position_relative
+    width: 100%
+    padding: 60px 0
+    .about_content
+        @extend %display_flex
+        .about_img
+            width: 40%
+            position: $min_position_relative
+            margin-right: 30px
+            -webkit-margin-right: 30px
+            -moz-margin-right: 30px
+            position: relative
+            display: flex
+            &::after
+                content: ''
+                width: 166px
+                border: 3px solid $main_background-color
+                position: $min_position_absolute
+                right: -119px
+                top: 50%
+                z-index: -1
+                border-radius: 60px
+            &::before
+                content: 'About'
+                position: $min_position_absolute
+                font-size: $min_50_font-size
+                font-family: $chinese_font
+                font-style: italic
+                top: 37%
+                right: -117px
+            .about_img_content
+                width: 100%
+                height: 100%
+                position: $min_position_relative
+                display: flex
+                align-items: center
+                img
+                    width: 100%
+                    height: auto
+                .about_img_content_background
+                    position: $min_position_absolute
+                    z-index: -1
+                .about_img_content_border
+                    position: $min_position_absolute
+                    right: -77px
+                    z-index: -1
+        .about_text
+            width: 40%
+            margin-left: 100px
+            -webkit-margin-left: 100px
+            -moz-margin-left: 100px
+            .about_text_content
+                margin: 0 auto
+                display: flex
+                justify-content: flex-end
+                p
+                    writing-mode: vertical-rl
+                    font-family: monospace
+                    font-size: 24px
+                    height: 300px
+                    line-height: 2
+                    padding-left: 60px
+                    margin-left: 60px
+                    border-left: 3px solid $main_background-color
+                    border-style: dashed
+
+// ---------------------------------------------------------------------              
+
+@media screen and (max-width: 1132px)
+    .static-section
+        height: auto
+        #about
+        .about
+            width: 100%
+            z-index: -1
+            .about_content
+                .about_img
+                    width: auto
+                    display: block
+                    margin-right: 0
+                    &::before
+                        width: 100%
+                        z-index: 2
+                        top: 104%
+                        right: 0
+                    &::after
+                        width: 0px
+                        height: 89px
+                        border: 3px solid $main_background-color
+                        left: 50%
+                        top: 95%
+                    .about_img_content
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        .about_img_content_background
+                        .about_img_content_border
+                            top: 10%
+                            right: 0
+                .about_text
+                    width: 80%
+                    margin-top: 40px
+                    margin-left: 0
+                    .about_text_content
+                        justify-content: center
+                        p
+                            border-left: 0px solid
+                            padding-left: 0px
+                            margin-left: 0px
+                            border-top: 3px solid $main_background-color
+                            border-style: dashed
+                            padding-top: 60px
+                            margin-top: 60px
+
+@media screen and (max-width: 600px)
+    .static-section
+        #about
+        .about
+            .about_content
+                .about_img
+                    width: 80%
+                    &::before
+                    &::after
+                        height: 100px
+                        top: 95%
+                    .about_img_content
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        img
+                            width: 100%
+                            height: auto
+                        .about_img_content_background
+                            width: 100%
+                            height: auto
+                        .about_img_content_border
+                            width: 100%
+                            height: auto
+                .about_text
+                    .about_text_content
+                        p
+                            writing-mode: lr
+                        .service_text_box
+                            width: 80%
+                            margin: 40ox 0

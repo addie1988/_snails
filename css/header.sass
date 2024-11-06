@@ -1,0 +1,316 @@
+@import "_reset.sass"
+
+// ----------------------------------------------------------------    
+
+@font-face
+    font-family: 'ZenKakuGothicNew-Black'
+    src: url('../font/ZenKakuGothicNew-Black.ttf')
+
+@font-face
+    font-family: 'BlackOpsOne-Regular'
+    src: url('../font/BlackOpsOne-Regular.ttf')
+
+$max_1400_max-width: 1400px
+$header_logo: 50%
+$header_menu: 50%
+$min_position_relative: relative
+$min_position_absolute: absolute
+$min_50_font-size: 50px
+$min_60_font-size: 60px
+$min_24_font-size: 24px
+$min_18_font-size: 18px
+$min_16_font-size: 16px
+$min_11_font-size: 11px
+$menu_text_font-size: 30px
+$chinese_font: ZenKakuGothicNew-Black
+$main_background-color: #FFC700
+
+%display_flex
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+// ----------------------------------------------------------------  
+
+.header
+    position: $min_position_relative
+    width: $max_1400_max-width
+    .header_content
+        position: $min_position_relative
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        .header_box
+            position: $min_position_absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 100%
+            z-index: 1000
+            .header_box_content
+                @extend %display_flex
+                .logo
+                    width: $header_logo
+                    .logo_content
+                        a
+                            display: inline-block
+                            img
+                                width: 100%
+                .menu
+                    width: $header_menu
+                    display: flex
+                    align-items: center
+                    justify-content: end
+                    .menu_content
+                        display: flex
+                        justify-content: center
+                        .close-btn
+                            width: 50%
+                            display: flex
+                            align-items: center
+                            justify-content: end
+                            .close-btn_content
+                                margin: 0
+                                .close-btn_span
+                                    width: 50px
+                                    height: 50px
+                                    display: inline-block
+                                    position: $min_position_relative
+                                    @extend %display_flex
+                                    .close-btn_span_content
+                                        margin: 0 auto
+                                        @extend %display_flex
+                                        span
+                                            width: 4px
+                                            height: 40px
+                                            display: inline-block
+                                            background-color: #000000
+                                            border-radius: 50px
+                                            margin: 0 2px
+                                            transition: all .4s ease-in-out
+                                        &:hover
+                                            span
+                                                margin: 0
+                                                &:nth-last-child(1)
+                                                    transform: rotate(45deg)
+                                                &:nth-last-child(2)
+                                                    transform: rotate(-45deg)
+                        /* 全螢幕菜單的初始樣式 */
+                        .fullscreen-menu
+                            /* 初始狀態隱藏 */
+                            display: none
+                            position: fixed
+                            top: 0
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            background-color: rgba(51, 51, 51, 0.9)
+                            color: white
+                            /* 確保菜單在前面 */
+                            z-index: 9999999999999999
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            text-align: center
+                            .fullscreen-menu_content
+                                display: flex
+                                justify-content: flex-end
+                                width: 100%
+                                height: 100%
+                                .fullscreen-menu_content_text
+                                    position: $min_position_relative
+                                    padding: 0
+                                    width: 430px
+                                    max-width: 430px
+                                    height: 100%
+                                    background: url('../images/Component7.svg') no-repeat
+                                    background-position: center
+                                    background-size: cover
+                                    border-bottom-left-radius: 80px
+                                    display: flex
+                                    align-items: flex-end
+                                    @extend %display_flex
+                                    .fullscreen-menu_content_text_content
+                                        width: 100%
+                                        display: flex
+                                        align-items: center
+                                        justify-content: center
+                                        .close-btn
+                                            width: 50%
+                                            display: flex
+                                            align-items: center
+                                            justify-content: end
+                                            position: $min_position_absolute
+                                            top: 30px
+                                            right: 30px
+                                            .close-btn_content
+                                                margin: 0
+                                                .close-btn_span
+                                                    width: 50px
+                                                    height: 50px
+                                                    display: inline-block
+                                                    position: $min_position_relative
+                                                    @extend %display_flex
+                                                    .close-btn_span_content
+                                                        margin: 0 auto
+                                                        @extend %display_flex
+                                                        span
+                                                            width: 4px
+                                                            height: 40px
+                                                            display: inline-block
+                                                            background-color: #000000
+                                                            border-radius: 50px
+                                                            margin: 0 2px
+                                                            transition: all .4s ease-in-out
+                                                        &:hover
+                                                            span
+                                                                margin: 0
+                                                                &:nth-last-child(1)
+                                                                    transform: rotate(45deg)
+                                                                &:nth-last-child(2)
+                                                                    transform: rotate(-45deg)
+                                        .eye_svg
+                                            position: $min_position_absolute
+                                            width: 50%
+                                            height: auto
+                                            top: 40px
+                                            z-index: 1
+                                            .eye_svg_content
+                                                margin: 0 auto
+                                        ul
+                                            list-style: none
+                                            display: inline-block
+                                            padding-top: 60px
+                                            line-height: 2.6
+                                            position: $min_position_relative
+                                            z-index: 4
+                                            li
+                                                text-align: left
+                                                &:hover
+                                                    cursor: help
+                                                p
+                                                    color: #000
+                                                    font-size: $min_18_font-size
+                                                    font-family: $chinese_font
+                                                    letter-spacing: 16px
+                                                a
+                                                    color: #000
+                                                    text-decoration: none
+                                                    font-size: $min_24_font-size
+                                                    font-family: $chinese_font
+                                                    letter-spacing: 16px
+                                                    &:hover
+                                                        cursor: help
+                                    .copyright
+                                        position: $min_position_relative
+                                        width: 100%
+                                        padding-bottom: 40px
+                                        .copyright_content
+                                            margin: 0 auto
+                                            p
+                                                color: #000
+                                                font-size: $min_11_font-size
+        .header_banner
+            position: $min_position_relative
+            .header_banner_content
+                @extend %display_flex
+                img
+                    animation: header_banner_img 3s ease-in-out infinite
+                    @keyframes header_banner_img
+                     16.65% 
+                        -webkit-transform: translateY(6px)
+                        transform: translateY(6px)
+
+                     33.3% 
+                        -webkit-transform: translateY(-5px)
+                        transform: translateY(-5px)
+
+                     49.95% 
+                        -webkit-transform: translateY(4px)
+                        transform: translateY(4px)
+
+                     66.6% 
+                        -webkit-transform: translateY(-2px)
+                        transform: translateY(-2px)
+
+                     83.25% 
+                        -webkit-transform: translateY(1px)
+                        transform: translateY(1px)
+
+                        100%
+                            -webkit-transform: translateY(0)
+                            transform: translateY(0)
+.slogan
+    position: $min_position_absolute
+    left: 0
+    bottom: -50px
+    .slogan_content
+        margin: 0 auto
+         /* 跑馬燈容器 */
+        .marquee_myModal
+            width: 100%
+            overflow: hidden
+            white-space: nowrap
+            color: white
+
+        /* 跑馬燈內容 */
+        .marquee_myModal
+            display: inline-block
+            white-space: nowrap
+            font-family: "BlackOpsOne-Regular"
+            font-weight: 600
+            font-size: 160px
+            animation: scroll-left 20s linear infinite
+
+// ---------------------------------------------------------------------    
+
+// animation
+    @keyframes scroll-left
+        0%
+            transform: translateX(100%)
+
+        100%
+            transform: translateX(-100%)
+
+// ---------------------------------------------------------------------    
+
+@media screen and (max-width: 650px)
+    .header
+        width: 100%
+        overflow: hidden
+        .header_content
+            margin: 0 20px
+            height: 100%
+
+@media screen and (max-width: 650px)
+    #header
+        .header
+            .header_content
+                .header_box
+                    .header_box_content
+                .logo
+                    .logo_content
+                        a
+                .menu
+                    .menu_content
+                        .close-btn
+                            .close-btn_span
+                                .close-btn_span_content
+                                    span
+                                        &:hover
+                                            span
+                                                &:nth-last-child(1)
+                                                &:nth-last-child(2)
+                        /* 全螢幕菜單的初始樣式 */
+                        .fullscreen-menu
+                            /* 初始狀態隱藏 */
+                            /* 確保菜單在前面 */
+                            .fullscreen-menu_content
+                                .fullscreen-menu_content_text
+                                    border-bottom-left-radius: 0
+                .header_banner
+                    .header_banner_content
+                        img
