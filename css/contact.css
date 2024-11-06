@@ -163,6 +163,9 @@ table {
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill {
   position: relative;
+  padding: 10px 0;
+  -moz-padding: 10px 0;
+  -webkit-padding: 10px 0;
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill .emill_content {
@@ -218,6 +221,9 @@ table {
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill_icon {
   position: relative;
+  padding: 10px 0;
+  -moz-padding: 10px 0;
+  -webkit-padding: 10px 0;
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill_icon .emill_icon_content {
