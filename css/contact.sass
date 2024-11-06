@@ -72,7 +72,6 @@ $main_background-color: #FFC700
                         .contact_text_content
                             .contact_title_text
                                 .contact_title_text_contrne
-                                    margin: 50px auto
                                     line-height: 3
                                     p
                                         color: #000
@@ -80,7 +79,9 @@ $main_background-color: #FFC700
                                         font-family: $chinese_font
                                     .contact_title_text_contrne_span
                                         position: $min_position_relative
-                                        margin: 20px 0
+                                        padding: 10px 0
+                                        -webkit-padding: 10px 0
+                                        -moz-padding: 10px 0
                                         .contact_title_text_contrne_span_content
                                             margin: 0 auto
                                             display: flex
@@ -157,10 +158,17 @@ $main_background-color: #FFC700
                                             ul
                                                 display: flex
                                                 li
-                                                    margin-right: 16px
+                                                    margin: 0 7px
+                                                    a
+                                                        display: flex
+                                                        align-items: center
+                                                        justify-content: center
                             .up
                                 position: $min_position_relative
                                 display: inline-block
+                                padding: 20px 0
+                                -webkit-padding: 20px 0
+                                -moz-padding: 20px 0
                                 .up_content
                                     margin: 0 auto
                                     position: $min_position_relative
@@ -280,8 +288,6 @@ $main_background-color: #FFC700
                                                     align-items: center
                                                     justify-content: center
                                                     li
-                                                        margin-right: 0px
-                                                        margin: 16px
                                 .up
                                     order: 2
                                     .up_content

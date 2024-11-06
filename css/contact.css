@@ -107,7 +107,6 @@ table {
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne {
-  margin: 50px auto;
   line-height: 3;
 }
 
@@ -119,7 +118,9 @@ table {
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .contact_title_text_contrne_span {
   position: relative;
-  margin: 20px 0;
+  padding: 10px 0;
+  -webkit-padding: 10px 0;
+  -moz-padding: 10px 0;
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .contact_title_text_contrne_span .contact_title_text_contrne_span_content {
@@ -228,12 +229,21 @@ table {
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill_icon .emill_icon_content ul li {
-  margin-right: 16px;
+  margin: 0 7px;
+}
+
+.section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill_icon .emill_icon_content ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .up {
   position: relative;
   display: inline-block;
+  padding: 20px 0;
+  -webkit-padding: 20px 0;
+  -moz-padding: 20px 0;
 }
 
 .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .up .up_content {
@@ -366,10 +376,6 @@ table {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-  .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .contact_title_text .contact_title_text_contrne .emill_icon .emill_icon_content ul li {
-    margin-right: 0px;
-    margin: 16px;
   }
   .section_contact .section-content #contact .contact .contact_content .contact_text .contact_text_content .up {
     order: 2;
