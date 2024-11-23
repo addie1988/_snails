@@ -74,7 +74,7 @@ table {
   z-index: -1;
   right: 0;
   bottom: -1px;
-  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
 }
 
 .section_contact .section-content #contact .contact {
