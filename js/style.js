@@ -162,7 +162,6 @@ function marquee_myModal() {
 //   --------------------------------------------------------------------------
 
 // 漢堡選單
-
 function toggleMenu() {
   const menu = document.getElementById("menu_img_text");
   menu.style.display = "block";
@@ -177,6 +176,7 @@ function closure() {
 
 //   --------------------------------------------------------------------------
 
+// Top
 function up() {
   // 獲取所有錨點連結
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
