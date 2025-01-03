@@ -435,7 +435,7 @@ body, html, p, b {
 
 @media screen and (max-width: 1400px) {
   .works .works_min-content .works .works_content .modal .myModal_header {
-    width: 90%;
+    width: 100%;
   }
   .works .works_min-content .works .works_content .modal #modal-content .pop_up_ads .pop_up_ads-content {
     width: 90%;
